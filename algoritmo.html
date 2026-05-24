@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Algoritmos</title>
+</head>
+<body>
+
+  <h1>Algoritmo</h1>
+
+  <img src="img/Algoritmo.png" width="150" alt="Representación de un algoritmo">
+
+  <h2>Índice</h2>
+  <ul>
+    <li><a href="#definicion">Definición de Algoritmo</a></li>
+    <li><a href="#caracteristicas">Características y Estados</a></li>
+    <li><a href="#proceso-logico">Proceso Lógico y Secuencias</a></li>
+    <li><a href="#ejemplo-maximo">Ejemplo: Encontrar el máximo de un conjunto</a>
+      <ul>
+        <li><a href="#descripcion-alto">Descripción de alto nivel</a></li>
+        <li><a href="#logica-pasos">Lógica de pasos detallada</a></li>
+      </ul>
+    </li>
+    <li><a href="#tecnicas-diseño">Técnicas de diseño de algoritmos</a></li>
+    <li><a href="#complejidad">Temas de Complejidad y Disciplinas</a></li>
+    <li><a href="#referencias">Referencias</a></li>
+  </ul>
+
+  <h2 id="definicion">Definición de Algoritmo</h2>
+  <p>En matemáticas, lógica, computación y disciplinas relacionadas, un algoritmo es un conjunto de instrucciones o reglas definidas y no ambiguas, ordenadas y finitas que permite, típicamente, solucionar un problema, realizar un cómputo, procesar datos y llevar a cabo otras tareas o actividades. Dados un estado inicial y una entrada, siguiendo los pasos sucesivos se llega a un estado final y se obtiene una solución.</p>
+  <p>Los algoritmos son el objeto de estudio de la algoritmia y son fundamentales en la informática, ya que permiten que las máquinas ejecuten tareas complejas siguiendo una lógica de pasos determinados. En la vida cotidiana, se emplean algoritmos frecuentemente para resolver problemas, como los manuales de usuario que muestran pasos para usar un aparato, o las instrucciones que recibe un trabajador de su patrón.</p>
+  <p>En el ámbito matemático, existen ejemplos clásicos que han perdurado por siglos. Uno de ellos es el algoritmo de división para calcular el cociente de dos números. Otro es el algoritmo de Euclides para obtener el máximo común divisor de dos enteros positivos, o el método de Gauss para resolver un sistema de ecuaciones lineales. La importancia de un algoritmo radica en su capacidad para transformar una entrada en una salida de manera sistemática y reproducible.</p>
+
+  <h2 id="caracteristicas">Características y Estados</h2>
+  <p>Un algoritmo debe cumplir con requisitos específicos para ser considerado válido dentro de las ciencias de la computación. Debe ser preciso, indicando el orden de realización de cada paso sin dejar lugar a dudas. Debe estar definido, lo que significa que si se sigue el mismo algoritmo varias veces con la misma entrada, se debe obtener siempre el mismo resultado. Además, debe ser finito, terminando en un tiempo determinado tras un número contado de acciones.</p>
+  <p>En todo proceso algorítmico se distinguen tres partes fundamentales. La entrada o input consiste en los datos iniciales necesarios para operar. El proceso abarca el conjunto de operaciones y transformaciones aplicadas a esos datos. Finalmente, la salida u output representa el resultado final entregado al usuario o sistema. Esta estructura permite que cualquier problema complejo se descomponga en partes manejables y lógicas.</p>
+
+  <h2 id="proceso-logico">Proceso Lógico y Secuencias</h2>
+  <p>La ejecución de un algoritmo implica transitar por una serie de estados. Mientras se evalúa una secuencia de datos, el sistema podrá leer e interpretar señales. Por ejemplo, en un sistema de conteo, se puede definir una señal positiva en el caso de que la cantidad de ceros sea mayor que la de unos, y una señal negativa en el caso contrario.</p>
+  <p>Finalmente, la salida de este tipo de algoritmos se define como la devolución de valores exclusivamente positivos si se cumple la condición mayoritaria de la secuencia y, en cualquier otro caso, devolverá una mezcla de señales positivas y negativas. Este comportamiento demuestra cómo los algoritmos pueden tomar decisiones basadas en comparaciones simples de datos de entrada.</p>
+
+  <h2 id="ejemplo-maximo">Ejemplo: Encontrar el máximo de un conjunto</h2>
+  <p>Este problema consiste en encontrar el número más grande dentro de una lista finita. Es un ejemplo fundamental para entender cómo una computadora recorre una estructura de datos y utiliza variables auxiliares para almacenar resultados temporales.</p>
+
+  <h3 id="descripcion-alto">Descripción de alto nivel</h3>
+  <p>Dado un conjunto finito de números, se busca identificar cuál es el mayor de todos. Para ello, se establece una estrategia de comparación secuencial. No importa el tamaño del conjunto, siempre que sea finito, el algoritmo podrá determinar el valor máximo tras compararlos todos uno por uno contra una referencia que se actualiza constantemente.</p>
+
+  <h3 id="logica-pasos">Lógica de pasos detallada</h3>
+  <p>El proceso comienza asumiendo que el primer número de la lista (posición cero) es el más grande hasta el momento. A continuación, se inicia un recorrido desde el segundo elemento hasta el último. En cada paso, se compara el elemento actual con el valor máximo guardado. Si el elemento actual resulta ser mayor, el valor máximo guardado se reemplaza por este nuevo número.</p>
+  <p>Al terminar de recorrer toda la lista, la variable que contenía el máximo temporal se convierte en el resultado final del algoritmo. Esta lógica se puede implementar en diversos lenguajes de programación utilizando ciclos y condicionales simples, permitiendo resolver el problema con una eficiencia que depende directamente del número de elementos presentes en el conjunto inicial.</p>
+
+  <h2 id="tecnicas-diseño">Técnicas de diseño de algoritmos</h2>
+  <p>Existen diversos enfoques para resolver problemas mediante algoritmos, cada uno adaptado a la eficiencia que se requiera:</p>
+  <ul>
+    <li>Algoritmos voraces: seleccionan los elementos más prometedores en cada paso para encontrar una solución rápida.</li>
+    <li>Algoritmos paralelos: dividen el problema en subproblemas que se ejecutan de forma simultánea en varios procesadores.</li>
+    <li>Algoritmos probabilísticos: utilizan valores aleatorios o pseudoaleatorios para determinar algunos de sus pasos.</li>
+    <li>Algoritmos determinísticos: tienen un comportamiento lineal donde cada paso tiene un único sucesor predefinido.</li>
+    <li>Divide y vencerás: fragmentan un problema en subconjuntos disjuntos para resolverlos por separado y luego unirlos.</li>
+    <li>Metaheurísticas: encuentran soluciones aproximadas basándose en la experiencia o conocimiento anterior del problema.</li>
+    <li>Programación dinámica: resuelve problemas complejos almacenando resultados de subproblemas para evitar cálculos repetidos.</li>
+    <li>Vuelta atrás: examina un espacio de soluciones en forma de árbol y retrocede cuando una rama no conduce al éxito.</li>
+  </ul>
+
+  <h2 id="complejidad">Temas de Complejidad y Disciplinas</h2>
+  <p>El análisis de algoritmos permite medir los recursos necesarios, como el tiempo de ejecución y el espacio en memoria. Se utilizan conceptos como la complejidad computacional para entender qué tan escalable es una solución. Las herramientas visuales como los diagramas de flujo ayudan a representar estos procesos antes de ser codificados.</p>
+  <p>Las disciplinas vinculadas incluyen las ciencias de la computación, la inteligencia artificial, la investigación operativa y la programación. La Máquina de Turing, un concepto clave en la informática teórica, sirve como modelo para entender los límites de lo que un algoritmo puede computar.</p>
+
+  <h2 id="referencias">Referencias</h2>
+  <ul>
+    <li><a href="inteligencia artificial.html">Inteligencia Artificial</a></li>
+    <li><a href="turing.html"> Biografía de Alan Turing</a></li>
+    <li><a href="https://es.wikipedia.org/wiki/Algoritmo">Artículo original</a></li>
+  </ul>
+
+</body>
+</html>
