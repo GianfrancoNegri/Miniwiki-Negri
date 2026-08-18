@@ -92,16 +92,33 @@ main {
 footer {
     grid-area: referencias;
     background-color: #3f3f5e;
-    padding: 17px;
+    height: 60px;
+    padding: 4px 12px;
     border-top: 4px solid #eeeeee;
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer h2 {
+    margin: 0;
+    font-size: 14px;
+    color: #dddddde1;
 }
 
 .lista-referencias {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    
     width: 100%;
-    margin: 0;
+    margin: 10px 0 0 0;
     padding: 0;
+    gap: 40px;
+}
+
+.lista-referencias li {
+    display: flex;
+    align-items: center;
 }
 
 footer a {
