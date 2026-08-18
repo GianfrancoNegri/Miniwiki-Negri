@@ -122,6 +122,10 @@ main {
     color: #676767;
 }
 
+.tarjeta-chica {
+    width: 130px;
+}
+
 
 footer {
     grid-area: referencias;
