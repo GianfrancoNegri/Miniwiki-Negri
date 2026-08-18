@@ -22,7 +22,7 @@ body {
 
 header {
     grid-area: cabecera;
-    background-color: lab(53.62% 66.99 42.57);
+    background-color: #ee3b3b;
     border-bottom: 2px solid #eeeeee;
     padding: 10px 20px; 
     display: flex;
@@ -73,6 +73,14 @@ aside li {
     padding-bottom: 5px;
     margin-bottom: 8px;
 }
+
+aside h2 {
+    margin: 0 0 15px 0;
+    font-size: 25px;
+    color: #ee3b3b;
+    text-align: center;
+}
+
 
 .subtema {
     border-bottom: none;
