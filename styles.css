@@ -34,7 +34,7 @@ header {
     display: flex;
     align-items: center;
     gap: 12px;
-    width: 175px;
+    width: 105px;
 }
 
 .logo-institucional {
@@ -52,7 +52,7 @@ header h1 {
 }
 
 .logo-wiki {
-    height: 45px;
+    height: 50px;
     width: auto;
    
 }
@@ -100,6 +100,28 @@ main {
     padding: 15px;
     min-width: 0;
 }
+.imagen-contextual {
+    float: right;
+    width: 220px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 8px;
+    margin: 30px 5px 5px 25px;
+}
+
+.imagen-contextual img {
+    width: 100%;
+    height: auto;
+    
+}
+
+.texto-imagen {
+    margin: 5px 0 0 0;
+    font-size: 12px;
+    line-height: 1.3;
+    color: #676767;
+}
+
 
 footer {
     grid-area: referencias;
