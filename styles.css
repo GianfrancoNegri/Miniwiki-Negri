@@ -147,11 +147,11 @@ footer h2 {
 .lista-referencias {
     display: flex;
     justify-content: center;
-    
     width: 100%;
     margin: 10px 0 0 0;
     padding: 0;
-    gap: 40px;
+    gap: 20px 40px;
+    flex-wrap: wrap;
 }
 
 .lista-referencias li {
@@ -159,6 +159,7 @@ footer h2 {
     align-items: center;
 }
 
+
 footer a {
-    color: #ffffff;
+    color: #ffffff; 
 }
