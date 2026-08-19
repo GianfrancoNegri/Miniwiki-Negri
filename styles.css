@@ -150,6 +150,7 @@ footer h2 {
     width: 100%;
     margin: 10px 0 0 0;
     padding: 0;
+    gap: 40px;
     gap: 20px 40px;
     flex-wrap: wrap;
 }
