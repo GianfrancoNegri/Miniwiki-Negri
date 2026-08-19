@@ -2,14 +2,14 @@ body {
     font-family: sans-serif;
     line-height: 1.6;
     color: #333333;
-    background-color: #f9f9f998;
+    background-color: #f9f9f9;
     padding: 10px;
 }
 
 .contenedor-wiki {
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #f9f9f998;
+    background-color: #f9f9f9;
     border: 1px solid #dddddd;
     display: grid;
     grid-template-areas: 
@@ -34,7 +34,7 @@ header {
     display: flex;
     align-items: center;
     gap: 12px;
-    width: 105px;
+    width: 175px;
 }
 
 .logo-institucional {
@@ -48,13 +48,11 @@ header h1 {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    
 }
 
 .logo-wiki {
     height: 50px;
     width: auto;
-   
 }
 
 aside {
@@ -81,7 +79,6 @@ aside h2 {
     text-align: center;
 }
 
-
 .subtema {
     border-bottom: none;
     padding-bottom: 0;
@@ -100,19 +97,31 @@ main {
     padding: 15px;
     min-width: 0;
 }
+
+main h2 {
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 5px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
 .imagen-contextual {
     float: right;
     width: 220px;
     background-color: #ffffff;
     border: 1px solid #dddddd;
     padding: 8px;
-    margin: 30px 5px 5px 25px;
+    margin: 5px 0 10px 25px;
 }
 
 .imagen-contextual img {
     width: 100%;
     height: auto;
-    
+}
+
+.tarjeta-chica {
+    width: 170px;
 }
 
 .texto-imagen {
@@ -121,11 +130,6 @@ main {
     line-height: 1.3;
     color: #676767;
 }
-
-.tarjeta-chica {
-    width: 130px;
-}
-
 
 footer {
     grid-area: referencias;
@@ -137,11 +141,10 @@ footer {
     flex-direction: column;
 }
 
-
 footer h2 {
     margin: 0;
     font-size: 14px;
-    color: #dddddde1;
+    color: #dddddd;
 }
 
 .lista-referencias {
@@ -150,8 +153,7 @@ footer h2 {
     width: 100%;
     margin: 10px 0 0 0;
     padding: 0;
-    gap: 40px;
-    gap: 20px 40px;
+    gap: 15px 20px;
     flex-wrap: wrap;
 }
 
@@ -160,7 +162,7 @@ footer h2 {
     align-items: center;
 }
 
-
 footer a {
-    color: #ffffff; 
+    color: #ffffff;
+    font-size: 12px;
 }
