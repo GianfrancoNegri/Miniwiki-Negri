@@ -114,3 +114,88 @@ secciones.forEach(function (seccion) {
         });
     }
 });
+
+const formularioDiscusion = document.querySelector('#form-discusion');
+const campoNombre = document.querySelector('#input-nombre');
+const campoComentario = document.querySelector('#texto-comentario');
+const contadorCaracteres = document.querySelector('#contador-caracteres');
+const avisoFormulario = document.querySelector('#aviso-formulario');
+const listaComentarios = document.querySelector('#lista-de-comentarios');
+
+
+campoComentario.addEventListener('input', function () {
+
+    const caracteresUsados = campoComentario.value.length;
+
+    contadorCaracteres.textContent = `${caracteresUsados} / 200`;
+
+    if (caracteresUsados > 200) {
+        contadorCaracteres.classList.add('contador-error');
+        campoComentario.classList.add('campo-error');
+    } else {
+        contadorCaracteres.classList.remove('contador-error');
+        campoComentario.classList.remove('campo-error');
+    }
+});
+
+
+formularioDiscusion.addEventListener('submit', function (e) {
+
+    e.preventDefault();
+
+    avisoFormulario.textContent = '';
+    campoNombre.classList.remove('campo-error');
+    campoComentario.classList.remove('campo-error');
+
+    const nombre = campoNombre.value.trim();
+    const comentario = campoComentario.value.trim();
+
+    if (nombre === '') {
+        avisoFormulario.textContent = 'El nombre no puede estar vacío. ';
+        campoNombre.classList.add('campo-error');
+    }
+
+    if (comentario.length < 10 || comentario.length > 200) {
+        avisoFormulario.textContent += 'El comentario debe tener entre 10 y 200 caracteres.';
+        campoComentario.classList.add('campo-error');
+    }
+
+    if (avisoFormulario.textContent !== '') {
+        return;
+    }
+
+    crearComentario(nombre, comentario);
+
+    formularioDiscusion.reset();
+    contadorCaracteres.textContent = '0 / 200';
+    contadorCaracteres.classList.remove('contador-error');
+});
+
+
+function crearComentario(nombre, comentario) {
+
+    const elementoComentario = document.createElement('li');
+    const nombreComentario = document.createElement('strong');
+    const textoComentario = document.createElement('p');
+    const botonBorrar = document.createElement('button');
+
+    nombreComentario.textContent = nombre;
+    textoComentario.textContent = comentario;
+    botonBorrar.textContent = 'Borrar';
+
+    botonBorrar.classList.add('boton-borrar-comentario');
+
+    elementoComentario.append(nombreComentario);
+    elementoComentario.append(textoComentario);
+    elementoComentario.append(botonBorrar);
+
+    listaComentarios.append(elementoComentario);
+}
+
+
+listaComentarios.addEventListener('click', function (e) {
+
+    if (e.target.classList.contains('boton-borrar-comentario')) {
+        e.target.parentElement.remove();
+    }
+});
