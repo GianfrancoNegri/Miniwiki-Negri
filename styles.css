@@ -166,3 +166,28 @@ footer a {
     color: #ffffff;
     font-size: 12px;
 }
+
+
+
+.fondo-oscuro {
+    background-color: #242321;
+    color: #DDD6CC;
+}
+
+.contenedor-oscuro {
+    background-color: #2D2A28;
+    border-color: #48413B;
+}
+
+.panel-oscuro {
+    background-color: #35312E;
+    border-color: #48413B;
+}
+
+.texto-oscuro {
+    color: #DDD6CC;
+}
+
+.enlace-oscuro {
+    color: #C68E8B;
+}
