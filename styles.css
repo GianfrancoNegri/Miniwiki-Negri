@@ -126,7 +126,7 @@ main h2 {
 
 .texto-imagen {
     margin: 5px 0 0 0;
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 1.3;
     color: #676767;
 }
@@ -190,4 +190,26 @@ footer a {
 
 .enlace-oscuro {
     color: #C68E8B;
+}
+
+
+.texto-pequeño {
+    font-size: 0.875rem;
+}
+
+
+.texto-estandar {
+    font-size: 1rem;
+}
+
+.texto-grande {
+    font-size: 1.125rem;
+}
+
+
+.boton-seleccionado {
+    background-color: #ee3b3b;
+    color: #ffffff;
+    border: 2px solid #c52c2c;
+    font-weight: bold;
 }

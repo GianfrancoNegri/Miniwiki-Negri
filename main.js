@@ -47,3 +47,43 @@ BotonDelTema.addEventListener('click', function () {
         BotonDelTema.textContent = 'Modo oscuro';
     }
 });
+
+
+const botonTextoPequeño = document.querySelector('#Texto-Pequeño');
+const botonTextoNormal = document.querySelector('#Texto-Normal');
+const botonTextoGrande = document.querySelector('#Texto-Grande');
+
+const articulo = document.querySelector('main');
+const botonesTexto = document.querySelectorAll('.opciones-del-texto button');
+
+
+function cambiarTamañoTexto(tamaño, botonSeleccionado) {
+
+    articulo.classList.remove('texto-pequeño');
+    articulo.classList.remove('texto-estandar');
+    articulo.classList.remove('texto-grande');
+
+    articulo.classList.add(tamaño);
+
+    botonesTexto.forEach(function (boton) {
+        boton.classList.remove('boton-seleccionado');
+    });
+
+    botonSeleccionado.classList.add('boton-seleccionado');
+}
+
+
+botonTextoPequeño.addEventListener('click', function () {
+    cambiarTamañoTexto('texto-pequeño', botonTextoPequeño);
+});
+
+botonTextoNormal.addEventListener('click', function () {
+    cambiarTamañoTexto('texto-estandar', botonTextoNormal);
+});
+
+botonTextoGrande.addEventListener('click', function () {
+    cambiarTamañoTexto('texto-grande', botonTextoGrande);
+});
+
+
+cambiarTamañoTexto('texto-estandar', botonTextoNormal);
