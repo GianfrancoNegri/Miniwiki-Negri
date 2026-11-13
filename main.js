@@ -87,3 +87,30 @@ botonTextoGrande.addEventListener('click', function () {
 
 
 cambiarTamañoTexto('texto-estandar', botonTextoNormal);
+
+
+
+const secciones = document.querySelectorAll('main section');
+
+secciones.forEach(function (seccion) {
+
+    const titulo = seccion.querySelector('h2');
+
+    if (titulo) {
+
+        const flecha = document.createElement('span');
+        flecha.textContent = ' ▾';
+        titulo.append(flecha);
+
+        titulo.addEventListener('click', function () {
+
+            seccion.classList.toggle('plegada');
+
+            if (seccion.classList.contains('plegada')) {
+                flecha.textContent = ' ▸';
+            } else {
+                flecha.textContent = ' ▾';
+            }
+        });
+    }
+});

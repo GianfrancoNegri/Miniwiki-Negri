@@ -213,3 +213,10 @@ footer a {
     border: 2px solid #c52c2c;
     font-weight: bold;
 }
+
+
+.plegada p,
+.plegada ul,
+.plegada h3 {
+    display: none;
+}
