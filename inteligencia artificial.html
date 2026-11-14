@@ -54,12 +54,13 @@
         Salir del modo lectura
     </button>
     <h1>Inteligencia Artificial</h1>
-    <div class="imagen-contextual">
+    
+
+    <section>
+      <div class="imagen-contextual">
   <img src="img/dall-e.png" alt="Logotipo o imagen representativa del sistema de inteligencia artificial DALL-E">
   <p class="texto-imagen">Imagen generada por el modelo de IA de generación de imágenes DALL•E.</p>
 </div>
-
-    <section>
       <h2 id="definicion">Definición</h2>
       <p>La inteligencia artificial, abreviada como IA o AI (por su nombre en inglés: artificial intelligence), en el contexto de las ciencias de la computación, es una disciplina y un conjunto de capacidades cognoscitivas e intelectuales expresadas por sistemas informáticos o combinaciones de algoritmos cuyo propósito es la creación de máquinas que imiten la inteligencia humana.</p>
       <p>Estas tecnologías permiten que las máquinas aprendan de la experiencia, se adapten a nuevas entradas y realicen tareas humanas como el reconocimiento de voz, la toma de decisiones, la traducción de idiomas o la visión por computadora.</p>
@@ -180,26 +181,25 @@
       <h3 id="veo">Veo 3.0</h3>
       <p>Es el modelo generativo de vídeo más avanzado de Google. Es capaz de crear clips de alta definición (1080p) que superan el minuto de duración, demostrando una comprensión profunda de la cinematografía y la consistencia visual a partir de texto.</p>
     </section>
-  <section>
+ <section>
     <h2 id="discusion">Discusión</h2>
 
-    <form id="form-discusion">
+    <form id="form-discusion" class="formulario-discusion">
 
         <label for="input-nombre">Nombre:</label>
-        <input type="text" id="input-nombre">
+        <input type="text" id="input-nombre" class="campo-nombre">
 
         <label for="texto-comentario">Comentario:</label>
-        <textarea id="texto-comentario"></textarea>
+        <textarea id="texto-comentario" class="campo-comentario"></textarea>
 
-        <p id="contador-caracteres">0 / 200</p>
+        <p id="contador-caracteres" class="contador-caracteres">0 / 200</p>
 
-        <button type="submit">Enviar comentario</button>
-
+      <button type="submit" class="boton-enviar-comentario">Enviar comentario</button>
     </form>
 
-    <p id="aviso-formulario"></p>
+    <p id="aviso-formulario" class="aviso-formulario"></p>
 
-    <ul id="lista-de-comentarios"></ul>
+    <ul id="lista-de-comentarios" class="lista-de-comentarios"></ul>
 </section>
   </main>
 

@@ -95,6 +95,11 @@ const secciones = document.querySelectorAll('main section');
 secciones.forEach(function (seccion) {
 
     const titulo = seccion.querySelector('h2');
+    const parrafos = seccion.querySelectorAll('p');
+    const listas = seccion.querySelectorAll('ul');
+    const subtitulos = seccion.querySelectorAll('h3');
+    const imagenes = seccion.querySelectorAll('.imagen-contextual');
+    const formularios = seccion.querySelectorAll('form');
 
     if (titulo) {
 
@@ -108,13 +113,49 @@ secciones.forEach(function (seccion) {
 
             if (seccion.classList.contains('plegada')) {
                 flecha.textContent = ' ▸';
+                parrafos.forEach(function (parrafo) {
+                    parrafo.classList.add('elemento-plegado');
+                });
+            
+                listas.forEach(function (lista) {
+                    lista.classList.add('elemento-plegado');
+                });
+                subtitulos.forEach(function (subtitulo) {
+                    subtitulo.classList.add('elemento-plegado');
+                });
+                imagenes.forEach(function (imagen) {
+                    imagen.classList.add('elemento-plegado');
+                });
+                formularios.forEach(function (formulario) {
+                formulario.classList.add('formulario-plegado');
+                });
+
             } else {
+
                 flecha.textContent = ' ▾';
+
+                parrafos.forEach(function (parrafo) {
+                    parrafo.classList.remove('elemento-plegado');
+                });
+
+                listas.forEach(function (lista) {
+                    lista.classList.remove('elemento-plegado');
+                });
+
+                subtitulos.forEach(function (subtitulo) {
+                    subtitulo.classList.remove('elemento-plegado');
+                });
+
+                imagenes.forEach(function (imagen) {
+                    imagen.classList.remove('elemento-plegado');
+                });
+                formularios.forEach(function (formulario) {
+                formulario.classList.remove('formulario-plegado');
+                });
             }
         });
     }
 });
-
 const formularioDiscusion = document.querySelector('#form-discusion');
 const campoNombre = document.querySelector('#input-nombre');
 const campoComentario = document.querySelector('#texto-comentario');

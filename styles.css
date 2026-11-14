@@ -220,19 +220,20 @@ footer a {
 .plegada h3 {
     display: none;
 }
+.elemento-plegado {
+    display: none;
+}
 
 
 
-
-#form-discusion {
+.formulario-discusion {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 15px;
 }
 
-#form-discusion input,
-#form-discusion textarea {
+.campo-nombre {
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 5px;
@@ -240,17 +241,25 @@ footer a {
     font-size: 1rem;
 }
 
-#form-discusion textarea {
+.campo-comentario {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.formulario-discusion textarea {
     min-height: 100px;
 }
 
-#contador-caracteres {
+.contador-caracteres {
     margin: 0;
     font-size: 0.875rem;
     color: #676767;
 }
 
-#form-discusion button {
+.boton-enviar-comentario {
     padding: 10px;
     border: 2px solid #c52c2c;
     border-radius: 5px;
@@ -259,30 +268,32 @@ footer a {
     font-weight: bold;
 }
 
-#aviso-formulario {
+.aviso-formulario {
     color: #c52c2c;
     font-weight: bold;
 }
-
 
 .campo-error {
     border: 2px solid #c52c2c;
 }
 
-
-#lista-de-comentarios {
+.lista-de-comentarios {
     padding-left: 20px;
 }
 
-#lista-de-comentarios li {
+.lista-de-comentarios li {
     margin-top: 15px;
     padding: 12px;
     border: 1px solid #cccccc;
     border-radius: 5px;
 }
 
-#lista-de-comentarios p {
+.lista-de-comentarios p {
     margin: 8px 0;
+}
+
+.formulario-plegado {
+    display: none;
 }
 
 .boton-borrar-comentario {

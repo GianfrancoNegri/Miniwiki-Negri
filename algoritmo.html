@@ -65,16 +65,21 @@
   <section><h2 id="caracteristicas">Características y Estados</h2>
       <p>Un algoritmo debe cumplir con requisitos específicos para ser considerado válido dentro de las ciencias de la computación. Debe ser preciso, indicando el orden de realización de cada paso sin dejar lugar a dudas. Debe estar definido, lo que significa que si se sigue el mismo algoritmo varias veces con la misma entrada, se debe obtener siempre el mismo resultado. Además, debe ser finito, terminando en un tiempo determinado tras un número contado de acciones.</p>
       <p>En todo proceso algorítmico se distinguen tres partes fundamentales. La entrada o input consiste en los datos iniciales necesarios para operar. El proceso abarca el conjunto de operaciones y transformaciones aplicadas a esos datos. Finalmente, la salida u output representa el resultado final entregado al usuario o sistema. Esta estructura permite que cualquier problema complejo se descomponga en partes manejables y lógicas.</p>
-      <div class="imagen-contextual">
+     
+</section>
+<section>      <h2 id="proceso-logico">Proceso Lógico y Secuencias</h2>
+   <div class="imagen-contextual">
   <img src="img/Diagram_for_the_computation_of_Bernoulli_numbers.jpg" alt="Página manuscrita histórica con la tabla del algoritmo de Bernoulli">
   <p class="texto-imagen">Diagrama de Ada Lovelace de la «nota G», el primer algoritmo informático publicado.</p>
 </div>
-</section>
-<section>      <h2 id="proceso-logico">Proceso Lógico y Secuencias</h2>
       <p>La ejecución de un algoritmo implica transitar por una serie de estados. Mientras se evalúa una secuencia de datos, el sistema podrá leer e interpretar señales. Por ejemplo, en un sistema de conteo, se puede definir una señal positiva en el caso de que la cantidad de ceros sea mayor que la de unos, y una señal negativa en el caso contrario.</p>
       <p>Finalmente, la salida de este tipo de algoritmos se define como la devolución de valores exclusivamente positivos si se cumple la condición mayoritaria de la secuencia y, en cualquier otro caso, devolverá una mezcla de señales positivas y negativas. Este comportamiento demuestra cómo los algoritmos pueden tomar decisiones basadas en comparaciones simples de datos de entrada.</p>
 </section>
 <section> 
+  <div class="imagen-contextual tarjeta-chica">
+  <img src="img/Selection-Sort-Animation.gif" alt="Gráfico animado que muestra barras de diferentes tamaños ordenándose secuencialmente">
+  <p class="texto-imagen">Ilustración animada del proceso de un algoritmo de ordenación de números.</p>
+</div>
       <h2 id="ejemplo-maximo">Ejemplo: Encontrar el máximo de un conjunto</h2>
       <p>Este problema consiste en encontrar el número más grande dentro de una lista finita. Es un ejemplo fundamental para entender cómo una computadora recorre una estructura de datos y utiliza variables auxiliares para almacenar resultados temporales.</p>
 
@@ -85,10 +90,7 @@
       <p>El proceso comienza asumiendo que el primer número de la lista (posición cero) es el más grande hasta el momento. A continuación, se inicia un recorrido desde el segundo elemento hasta el último. En cada paso, se compara el elemento actual con el valor máximo guardado. Si el elemento actual resulta ser mayor, el valor máximo guardado se reemplaza por este nuevo número.</p>
       <p>Al terminar de recorrer toda la lista, la variable que contenía el máximo temporal se convierte en el resultado final del algoritmo. Esta lógica se puede implementar en diversos lenguajes de programación utilizando ciclos y condicionales simples, permitiendo resolver el problema con una eficiencia que depende directamente del número de elementos presentes en el conjunto inicial.</p>
 
-      <div class="imagen-contextual tarjeta-chica">
-  <img src="img/Selection-Sort-Animation.gif" alt="Gráfico animado que muestra barras de diferentes tamaños ordenándose secuencialmente">
-  <p class="texto-imagen">Ilustración animada del proceso de un algoritmo de ordenación de números.</p>
-</div>
+      
 </section> 
 
 <section> 
@@ -115,23 +117,22 @@
   <section>
     <h2 id="discusion">Discusión</h2>
 
-    <form id="form-discusion">
+    <form id="form-discusion" class="formulario-discusion">
 
         <label for="input-nombre">Nombre:</label>
-        <input type="text" id="input-nombre">
+        <input type="text" id="input-nombre" class="campo-nombre">
 
         <label for="texto-comentario">Comentario:</label>
-        <textarea id="texto-comentario"></textarea>
+        <textarea id="texto-comentario" class="campo-comentario"></textarea>
 
-        <p id="contador-caracteres">0 / 200</p>
+        <p id="contador-caracteres" class="contador-caracteres">0 / 200</p>
 
-        <button type="submit">Enviar comentario</button>
-
+    <button type="submit" class="boton-enviar-comentario">Enviar comentario</button>
     </form>
 
-    <p id="aviso-formulario"></p>
+    <p id="aviso-formulario" class="aviso-formulario"></p>
 
-    <ul id="lista-de-comentarios"></ul>
+    <ul id="lista-de-comentarios" class="lista-de-comentarios"></ul>
 </section>
   </main>
 
