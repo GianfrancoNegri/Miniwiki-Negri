@@ -268,18 +268,19 @@ listaComentarios.addEventListener('click', function (e) {
     }
 });
 
-
 const botonActivarLectura = document.querySelector('#boton-activar-lectura');
 const botonSalirLectura = document.querySelector('#boton-salir-lectura');
 
-
 botonActivarLectura.addEventListener('click', function () {
     document.body.classList.add('modo-lectura');
+    botonActivarLectura.classList.add('elemento-plegado');
+    botonSalirLectura.classList.add('boton-visible');
 });
-
 
 botonSalirLectura.addEventListener('click', function () {
     document.body.classList.remove('modo-lectura');
+    botonActivarLectura.classList.remove('elemento-plegado');
+    botonSalirLectura.classList.remove('boton-visible');
 });
 
 
