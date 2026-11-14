@@ -199,3 +199,17 @@ listaComentarios.addEventListener('click', function (e) {
         e.target.parentElement.remove();
     }
 });
+
+
+const botonActivarLectura = document.querySelector('#boton-activar-lectura');
+const botonSalirLectura = document.querySelector('#boton-salir-lectura');
+
+
+botonActivarLectura.addEventListener('click', function () {
+    document.body.classList.add('modo-lectura');
+});
+
+
+botonSalirLectura.addEventListener('click', function () {
+    document.body.classList.remove('modo-lectura');
+});

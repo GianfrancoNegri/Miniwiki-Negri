@@ -297,3 +297,34 @@ footer a {
     color: #8f1d1d;
     background-color: #f0dada;
 }
+
+
+.modo-lectura header,
+.modo-lectura aside,
+.modo-lectura footer {
+    display: none;
+}
+
+.modo-lectura .contenedor-wiki {
+    grid-template-areas: "articulo";
+    grid-template-columns: 1fr;
+}
+
+.modo-lectura main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+#boton-salir-lectura {
+    display: none;
+}
+
+.modo-lectura #boton-activar-lectura {
+    display: none;
+}
+
+.modo-lectura #boton-salir-lectura {
+    display: block;
+}
