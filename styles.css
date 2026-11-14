@@ -104,6 +104,7 @@ main h2 {
     margin-top: 25px;
     margin-bottom: 15px;
     color: #333333;
+    cursor: pointer;
 }
 
 .imagen-contextual {
@@ -121,7 +122,7 @@ main h2 {
 }
 
 .tarjeta-chica {
-    width: 170px;
+    width: 100px;
 }
 
 .texto-imagen {
@@ -168,31 +169,31 @@ footer a {
 }
 
 
-
+/* estilos generales que se aplican al activar el modo oscuro */
 .fondo-oscuro {
     background-color: #242321;
     color: #DDD6CC;
 }
-
+/* cambio el fondo y el borde del contenedor principal para adaptarlo al tema oscuro */
 .contenedor-oscuro {
     background-color: #2D2A28;
     border-color: #48413B;
 }
-
+/* aplico un fondo más oscuro a los paneles y contenedores secundarios */
 .panel-oscuro {
     background-color: #35312E;
     border-color: #48413B;
 }
-
+/* cambio el color del texto para que se pueda leer correctamente sobre los fondos oscuros */
 .texto-oscuro {
     color: #DDD6CC;
 }
-
+/* utilizo un color diferente para distinguir los enlaces sin perder contraste */
 .enlace-oscuro {
     color: #C68E8B;
 }
 
-
+/* utilizo rem para definir el tamaño en relación con el tamaño de fuente principal */
 .texto-pequeño {
     font-size: 0.875rem;
 }
@@ -207,6 +208,7 @@ footer a {
 }
 
 
+/* diferencio visualmente el botón que representa el tamaño de texto actualmente seleccionado */
 .boton-seleccionado {
     background-color: #ee3b3b;
     color: #ffffff;
@@ -214,14 +216,14 @@ footer a {
     font-weight: bold;
 }
 
-
+/* oculto los elementos que pertenecen al contenido de una sección plegada */
 
 .elemento-plegado {
     display: none;
 }
 
 
-
+/* utilizo flex en dirección vertical para ordenar los campos y botones del formulario */
 .formulario-discusion {
     display: flex;
     flex-direction: column;
@@ -244,11 +246,11 @@ footer a {
     font-family: Arial, sans-serif;
     font-size: 1rem;
 }
-
+/* establezco una altura mínima para que el campo del comentario tenga espacio suficiente */
 .formulario-discusion textarea {
     min-height: 100px;
 }
-
+/* utilizo un tamaño y color más discretos para que el contador no tenga más protagonismo que el formulario */
 .contador-caracteres {
     margin: 0;
     font-size: 0.875rem;
@@ -269,6 +271,7 @@ footer a {
     font-weight: bold;
 }
 
+/* marco los campos que tienen algún error para que el usuario pueda identificarlos fácilmente */
 .campo-error {
     border: 2px solid #c52c2c;
 }
@@ -276,7 +279,7 @@ footer a {
 .lista-de-comentarios {
     padding-left: 20px;
 }
-
+/* separo cada comentario y le agrego un borde para distinguirlo de los demás */
 .lista-de-comentarios li {
     margin-top: 15px;
     padding: 12px;
@@ -287,7 +290,7 @@ footer a {
 .lista-de-comentarios p {
     margin: 8px 0;
 }
-
+/* oculto el formulario cuando se pliega la sección de discusión */
 .formulario-plegado {
     display: none;
 }
@@ -304,11 +307,13 @@ footer a {
     color: #ff0000;
     background-color: #f0dada;
 }
+
+/* adapto el aviso del contador al modo oscuro para mantener una buena lectura */
 .contador-error-oscuro {
     color: #E6B8A2;
     background-color: #493832;
 }
-
+/* oculto el encabezado, el índice y las referencias para dejar solamente el artículo */
 .modo-lectura header{
     display: none;
 }
@@ -318,19 +323,21 @@ footer a {
 .modo-lectura footer {
     display: none;
 }
-
+/* modifico la distribución de grid para que el artículo ocupe toda la estructura disponible */
 .contenedor-lectura {
     grid-template-areas: "articulo";
     grid-template-columns: 1fr;
 }
-
+/* centro el artículo y limito su ancho para que la lectura sea más cómoda */
 .modo-lectura main {
     width: 80%;
     margin: 0 auto;
     text-align: left;
 }
 
-
+/* mantengo el botón de salida fijo en la pantalla, incluso cuando el usuario se desplaza
+   por el artículo, para que siempre pueda volver a la vista normal, para esto necesite utilizar una nueva propiedad llamada 
+   position: fixed, de otras maneras que he visto esta es la mejor para que sea comodo salir del modo de lectura*/
 .boton-salir-lectura {
     display: none;
     position: fixed;
@@ -343,13 +350,13 @@ footer a {
     border-radius: 5px;
     font-size: 13px;
 }
-
+/* muestro el botón de salida cuando se activa el modo lectura */
 .boton-visible {
     display: block;
 }
 
 
-
+/* separo visualmente el buscador del resto del artículo para que sea fácil de encontrar */
 .panel-de-busqueda {
     margin-top: 20px;
     padding: 10px;
@@ -360,7 +367,7 @@ footer a {
     margin-top: 5px;
     color: #ee3b3b;
 }
-
+/* cambio el color del título del buscador cuando se activa el modo oscuro */
 .titulo-busqueda-oscuro {
     color: #DDD6CC;
 }
@@ -372,7 +379,7 @@ footer a {
     border-radius: 5px;
     font-size: 14px;
 }
-
+/* resalto los párrafos que contienen la palabra buscada para facilitar su identificación */
 .parrafo-encontrado {
     background-color: #fff3d6;
     border-left: 3px solid #d6a84b;
@@ -394,12 +401,7 @@ footer a {
     border-color: #625A50;
 }
 
-.boton-seleccionado {
-    background-color: #ee3b3b;
-    color: #ffffff;
-    border: 2px solid #c52c2c;
-    font-weight: bold;
-}
+
 .borde-footer-oscuro {
     border-top: 4px solid #48413B;
 }
