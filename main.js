@@ -47,6 +47,11 @@ BotonDelTema.addEventListener('click', function () {
     campos.forEach(function (campo) {
         campo.classList.toggle('campo-oscuro');
     });
+    const parrafosEncontrados = document.querySelectorAll('.parrafo-encontrado');
+
+parrafosEncontrados.forEach(function (parrafo) {
+    parrafo.classList.toggle('parrafo-encontrado-oscuro');
+});
    const contador = document.querySelector('.contador-caracteres');
 
 if (document.body.classList.contains('fondo-oscuro')) {
@@ -308,11 +313,17 @@ const parrafos = seccion.querySelectorAll('p');
 
               const contenido = parrafo.textContent.toLowerCase();
                  parrafo.classList.remove('parrafo-encontrado');
+parrafo.classList.remove('parrafo-encontrado-oscuro');
 
-             if (palabra !== '' && contenido.includes(palabra)) {
-        parrafo.classList.add('parrafo-encontrado');
-        cantidadResultados++;
-     }
+if (palabra !== '' && contenido.includes(palabra)) {
+    parrafo.classList.add('parrafo-encontrado');
+
+    if (document.body.classList.contains('fondo-oscuro')) {
+        parrafo.classList.add('parrafo-encontrado-oscuro');
+    }
+
+    cantidadResultados++;
+}
         }
     });
       }

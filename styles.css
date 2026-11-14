@@ -382,6 +382,10 @@ footer a {
     border-left: 3px solid #d6a84b;
     padding: 8px;
 }
+.parrafo-encontrado-oscuro {
+    background-color: #493832;
+    border-left: 3px solid #245477;
+}
 
 .campo-oscuro {
     background-color: #2D2A28;
