@@ -213,3 +213,48 @@ botonActivarLectura.addEventListener('click', function () {
 botonSalirLectura.addEventListener('click', function () {
     document.body.classList.remove('modo-lectura');
 });
+
+
+
+const buscadorArticulo = document.querySelector('#buscador-articulo');
+const resultadoBusqueda = document.querySelector('#resultado-busqueda');
+const seccionesArticulo = document.querySelectorAll('main section');
+
+buscadorArticulo.addEventListener('change', function () {
+
+    const palabra = buscadorArticulo.value.toLowerCase().trim();
+    let cantidadResultados = 0;
+
+    seccionesArticulo.forEach(function (seccion) {
+
+    const titulo = seccion.querySelector('h2');
+
+    if (titulo && titulo.id !== 'discusion') {
+
+const parrafos = seccion.querySelectorAll('p');
+
+    parrafos.forEach(function (parrafo) {
+
+             if (!parrafo.classList.contains('texto-imagen')) {
+
+              const contenido = parrafo.textContent.toLowerCase();
+                 parrafo.classList.remove('parrafo-encontrado');
+
+             if (palabra !== '' && contenido.includes(palabra)) {
+        parrafo.classList.add('parrafo-encontrado');
+        cantidadResultados++;
+     }
+        }
+    });
+      }
+    });
+
+    if (palabra === '') {
+        resultadoBusqueda.textContent = '';
+    } else if (cantidadResultados === 0) {
+        resultadoBusqueda.textContent = 'No se encontraron resultados.';
+    } else {
+        
+        resultadoBusqueda.textContent = 'Se encontraron ' + cantidadResultados + ' párrafos.';
+    }
+});

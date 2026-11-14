@@ -328,3 +328,30 @@ footer a {
 .modo-lectura #boton-salir-lectura {
     display: block;
 }
+
+
+.panel-de-busqueda {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+.panel-de-busqueda h3 {
+    margin-top: 5px;
+    color: #ee3b3b;
+}
+
+.panel-de-busqueda input {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.parrafo-encontrado {
+    background-color: #fff3d6;
+    border-left: 3px solid #d6a84b;
+    padding: 8px;
+}
