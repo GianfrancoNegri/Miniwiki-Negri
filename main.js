@@ -72,8 +72,13 @@ if (document.body.classList.contains('fondo-oscuro')) {
     botonEnviar.classList.toggle('boton-enviar-oscuro');
 
     const footer = document.querySelector('footer');
-    footer.classList.toggle('borde-footer-oscuro');
+footer.classList.toggle('borde-footer-oscuro');
 
+if (document.body.classList.contains('fondo-oscuro')) {
+    BotonDelTema.textContent = 'Modo claro';
+} else {
+    BotonDelTema.textContent = 'Modo oscuro';
+}
 });
 
 
