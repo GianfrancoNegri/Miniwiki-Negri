@@ -23,13 +23,13 @@ BotonDelTema.addEventListener('click', function () {
     const contenedor = document.querySelector('.contenedor-wiki');
     contenedor.classList.toggle('contenedor-oscuro');
 
-    const paneles = document.querySelectorAll('aside, main, .imagen-contextual');
+    const paneles = document.querySelectorAll('aside, main, .imagen-contextual, .panel-de-busqueda');
 
     paneles.forEach(function (panel) {
         panel.classList.toggle('panel-oscuro');
     });
 
-    const subtitulos = document.querySelectorAll('aside h2, aside h3, main h2, main h3, main .texto-imagen');
+    const subtitulos = document.querySelectorAll('aside h2, aside h3, .panel-de-busqueda h3, main h2, main h3, main .texto-imagen, #contador-caracteres');
 
     subtitulos.forEach(function (subtitulo) {
         subtitulo.classList.toggle('texto-oscuro');
@@ -41,11 +41,34 @@ BotonDelTema.addEventListener('click', function () {
         enlace.classList.toggle('enlace-oscuro');
     });
 
-    if (document.body.classList.contains('fondo-oscuro')) {
-        BotonDelTema.textContent = 'Modo claro';
-    } else {
-        BotonDelTema.textContent = 'Modo oscuro';
+    const campos = document.querySelectorAll('input, textarea');
+    
+
+    campos.forEach(function (campo) {
+        campo.classList.toggle('campo-oscuro');
+    });
+   const contador = document.querySelector('.contador-caracteres');
+
+if (document.body.classList.contains('fondo-oscuro')) {
+    if (contador.classList.contains('contador-error')) {
+        contador.classList.add('contador-error-oscuro');
     }
+} else {
+    contador.classList.remove('contador-error-oscuro');
+}
+
+    const botones = document.querySelectorAll('button');
+
+    botones.forEach(function (boton) {
+        boton.classList.toggle('boton-oscuro');
+    });
+
+    const botonEnviar = document.querySelector('.boton-enviar-comentario');
+    botonEnviar.classList.toggle('boton-enviar-oscuro');
+
+    const footer = document.querySelector('footer');
+    footer.classList.toggle('borde-footer-oscuro');
+
 });
 
 
@@ -165,16 +188,20 @@ const listaComentarios = document.querySelector('#lista-de-comentarios');
 
 
 campoComentario.addEventListener('input', function () {
-
     const caracteresUsados = campoComentario.value.length;
-
     contadorCaracteres.textContent = `${caracteresUsados} / 200`;
 
     if (caracteresUsados > 200) {
         contadorCaracteres.classList.add('contador-error');
         campoComentario.classList.add('campo-error');
+
+        if (document.body.classList.contains('fondo-oscuro')) {
+            contadorCaracteres.classList.add('contador-error-oscuro');
+        }
+
     } else {
         contadorCaracteres.classList.remove('contador-error');
+        contadorCaracteres.classList.remove('contador-error-oscuro');
         campoComentario.classList.remove('campo-error');
     }
 });

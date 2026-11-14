@@ -261,7 +261,7 @@ footer a {
 
 .boton-enviar-comentario {
     padding: 10px;
-    border: 2px solid #c52c2c;
+    border: 2px solid #ee3b3b;
     border-radius: 5px;
     background-color: #ee3b3b;
     color: white;
@@ -305,10 +305,13 @@ footer a {
 }
 
 .contador-error {
-    color: #8f1d1d;
+    color: #ff0000;
     background-color: #f0dada;
 }
-
+.contador-error-oscuro {
+    color: #E6B8A2;
+    background-color: #493832;
+}
 
 .modo-lectura header,
 .modo-lectura aside,
@@ -352,6 +355,9 @@ footer a {
     margin-top: 5px;
     color: #ee3b3b;
 }
+.panel-de-busqueda h3.texto-oscuro {
+    color: #DDD6CC;
+}
 
 .panel-de-busqueda input {
     width: 90%;
@@ -365,4 +371,31 @@ footer a {
     background-color: #fff3d6;
     border-left: 3px solid #d6a84b;
     padding: 8px;
+}
+
+.campo-oscuro {
+    background-color: #2D2A28;
+    color: #DDD6CC;
+    border-color: #625A50;
+}
+.boton-oscuro {
+    background-color: #48413B;
+    color: #DDD6CC;
+    border-color: #625A50;
+}
+
+.boton-seleccionado {
+    background-color: #ee3b3b;
+    color: #ffffff;
+    border: 2px solid #c52c2c;
+    font-weight: bold;
+}
+.borde-footer-oscuro {
+    border-top: 4px solid #48413B;
+}
+
+.boton-enviar-oscuro {
+    background-color: #245477;
+    color: #ffffff;
+    border-color: #245477;
 }
