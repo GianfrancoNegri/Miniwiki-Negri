@@ -52,6 +52,11 @@ BotonDelTema.addEventListener('click', function () {
 parrafosEncontrados.forEach(function (parrafo) {
     parrafo.classList.toggle('parrafo-encontrado-oscuro');
 });
+
+    const tituloBusqueda = document.querySelector('.titulo-busqueda');
+    tituloBusqueda.classList.toggle('titulo-busqueda-oscuro');
+
+
    const contador = document.querySelector('.contador-caracteres');
 
 if (document.body.classList.contains('fondo-oscuro')) {
@@ -280,17 +285,20 @@ listaComentarios.addEventListener('click', function (e) {
 
 const botonActivarLectura = document.querySelector('#boton-activar-lectura');
 const botonSalirLectura = document.querySelector('#boton-salir-lectura');
+const contenedor = document.querySelector('.contenedor-wiki');
 
 botonActivarLectura.addEventListener('click', function () {
     document.body.classList.add('modo-lectura');
     botonActivarLectura.classList.add('elemento-plegado');
     botonSalirLectura.classList.add('boton-visible');
+    contenedor.classList.add('contenedor-lectura');
 });
 
 botonSalirLectura.addEventListener('click', function () {
     document.body.classList.remove('modo-lectura');
     botonActivarLectura.classList.remove('elemento-plegado');
     botonSalirLectura.classList.remove('boton-visible');
+    contenedor.classList.remove('contenedor-lectura');
 });
 
 

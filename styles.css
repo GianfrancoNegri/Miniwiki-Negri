@@ -215,11 +215,7 @@ footer a {
 }
 
 
-.plegada p,
-.plegada ul,
-.plegada h3 {
-    display: none;
-}
+
 .elemento-plegado {
     display: none;
 }
@@ -323,7 +319,7 @@ footer a {
     display: none;
 }
 
-.modo-lectura .contenedor-wiki {
+.contenedor-lectura {
     grid-template-areas: "articulo";
     grid-template-columns: 1fr;
 }
@@ -360,12 +356,12 @@ footer a {
     border: 1px solid #dddddd;
     border-radius: 5px;
 }
-
-.panel-de-busqueda h3 {
+.titulo-busqueda {
     margin-top: 5px;
     color: #ee3b3b;
 }
-.panel-de-busqueda h3.texto-oscuro {
+
+.titulo-busqueda-oscuro {
     color: #DDD6CC;
 }
 
